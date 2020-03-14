@@ -1,0 +1,81 @@
+
+li {
+  display: inline;
+}
+tr {
+    display: table;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.nav-position{
+    position: relative;
+}
+.form-center{
+    alignment: center;
+}
+
+.foot {
+    position: relative;
+    vertical-align : bottom;
+    margin-top: -55px;
+    clear: bottom;
+    height : 1px;
+}
+.siteTitle {
+    text-align: center;
+    font-style: oblique;
+    color: forestgreen;
+
+}
+
+.right-align {
+    float: right;
+}
+
+
+.display-row{
+    margin-left: 10%;
+}
+.no-wrap{
+    white-space: nowrap;
+}
+.hidden{
+    visibility: hidden;
+}
+.nav-text{
+    font-size: small;
+    height: 50%;
+}
+.current-page {
+    font-weight: bold;
+    color: forestgreen;
+}
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("../images/Spring.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: mediumseagreen;
+    font-style: normal;
+}
+
+.hero-title{
+    font-family: 'Candara', cursive;
+    font-size: 50px;
+}
