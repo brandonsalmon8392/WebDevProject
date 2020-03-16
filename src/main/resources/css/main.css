@@ -52,7 +52,7 @@ html, body {
 }
 .current-page {
     font-weight: bold;
-    color: forestgreen;
+    font-size: larger;
 }
 /* The hero image */
 .hero-image {

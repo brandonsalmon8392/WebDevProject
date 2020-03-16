@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SiteController {
 
-    @GetMapping("/events")
-    public String showEvents() {return "events";}
+    @GetMapping("/calendar")
+    public String showEvents() {return "calendar";}
 
     @GetMapping("/about")
     public String showAbout() {return "about";}
 
-    @GetMapping("/news")
-    public String showNews() {return "news";}
+    @GetMapping("/education")
+    public String showNews() {return "education";}
 
-    @GetMapping("/contact")
-    public String showContact() {return "contact";}
+    @GetMapping("/resources")
+    public String showContact() {return "employeeresources";}
 
 }
