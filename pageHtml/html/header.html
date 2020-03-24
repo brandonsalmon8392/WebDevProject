@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="pano">
+        <a href="About.html"><img src="../pics/iatse_logo_black_416.png" id="logo">
+        <nav class="topnav">
+            <a href="About.html">About</a>
+            <a href="Calendar.html">Calendar</a>
+            <a href="Education.html">Education</a>
+            <a href="Login.html">Member Login</a>
+            <a href="Resources.html">Resources</a>
+        </nav>
+    </div>
+
+</header>
+
+</body>
+</html>
