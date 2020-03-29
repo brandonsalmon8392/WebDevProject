@@ -1,0 +1,52 @@
+function isBlank(inputField){
+    if (inputField.value=="") {
+        return true;
+    }
+    return false;
+}
+
+// remove all error styles from the div passed in
+function makeClean(element){
+    element.classList.remove("error");
+}
+
+window.addEventListener("load", function() {
+
+    // add listeners for classes with required ...
+    var requiredInputs = document.querySelectorAll(".required");
+    for (var i=0; i < requiredInputs.length; i++) {
+        requiredInputs[i].addEventListener("change", function(e) {
+            makeClean(e.target);
+        });
+    }
+
+    //on submitting the form, "empty" checks are performed on required inputs
+    var mainForm = document.getElementById("mainForm");
+    mainForm.addEventListener("submit", function(e) {
+
+
+        var requiredInputs = document.querySelectorAll(".required");
+        for (var i=0; i < requiredInputs.length; i++){
+            if( isBlank(requiredInputs[i]) ){
+                e.preventDefault();
+                requiredInputs[i].classList.add("error");
+            }
+            else if ( requiredInputs[i].classList.contains("email") ){
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mainForm.email.value)) {
+                    e.preventDefault();
+                    mainForm.email.classList.add("error");
+                }
+            }
+            else if ( requiredInputs[i].classList.contains("phone") ){
+                if (!/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/.test(mainForm.phone.value)) {
+                    e.preventDefault();
+                    mainForm.phone.classList.add("error");
+                }
+            }
+            else {
+                makeClean(requiredInputs[i]);
+            }
+        }
+
+    });
+});
